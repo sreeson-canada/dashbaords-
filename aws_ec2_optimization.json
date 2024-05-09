@@ -717,12 +717,6 @@
                             "tick_pos": "50%",
                             "tick_edge": "left",
                             "has_padding": true
-                        },
-                        "layout": {
-                            "x": 0,
-                            "y": 0,
-                            "width": 6,
-                            "height": 1
                         }
                     },
                     {
@@ -738,12 +732,6 @@
                             "tick_pos": "50%",
                             "tick_edge": "left",
                             "has_padding": true
-                        },
-                        "layout": {
-                            "x": 6,
-                            "y": 0,
-                            "width": 6,
-                            "height": 1
                         }
                     },
                     {
@@ -765,12 +753,6 @@
                                     }
                                 }
                             ]
-                        },
-                        "layout": {
-                            "x": 0,
-                            "y": 1,
-                            "width": 6,
-                            "height": 3
                         }
                     },
                     {
@@ -828,12 +810,6 @@
                                 }
                             ],
                             "has_search_bar": "auto"
-                        },
-                        "layout": {
-                            "x": 6,
-                            "y": 1,
-                            "width": 6,
-                            "height": 6
                         }
                     },
                     {
@@ -855,12 +831,6 @@
                                     }
                                 }
                             ]
-                        },
-                        "layout": {
-                            "x": 0,
-                            "y": 4,
-                            "width": 6,
-                            "height": 3
                         }
                     }
                 ]
@@ -895,12 +865,6 @@
                             "tick_pos": "50%",
                             "tick_edge": "left",
                             "has_padding": true
-                        },
-                        "layout": {
-                            "x": 0,
-                            "y": 0,
-                            "width": 6,
-                            "height": 1
                         }
                     },
                     {
@@ -916,12 +880,6 @@
                             "tick_pos": "25%",
                             "tick_edge": "bottom",
                             "has_padding": true
-                        },
-                        "layout": {
-                            "x": 6,
-                            "y": 0,
-                            "width": 6,
-                            "height": 1
                         }
                     },
                     {
@@ -1016,14 +974,7 @@
                             ],
                             "yaxis": {
                                 "include_zero": false
-                            },
-                            "markers": []
-                        },
-                        "layout": {
-                            "x": 0,
-                            "y": 1,
-                            "width": 3,
-                            "height": 2
+                            }
                         }
                     },
                     {
@@ -1120,14 +1071,7 @@
                                 "label": "",
                                 "min": "auto",
                                 "max": "auto"
-                            },
-                            "markers": []
-                        },
-                        "layout": {
-                            "x": 3,
-                            "y": 1,
-                            "width": 3,
-                            "height": 2
+                            }
                         }
                     },
                     {
@@ -1217,12 +1161,6 @@
                                 }
                             ],
                             "has_search_bar": "auto"
-                        },
-                        "layout": {
-                            "x": 6,
-                            "y": 1,
-                            "width": 6,
-                            "height": 4
                         }
                     },
                     {
@@ -1298,14 +1236,7 @@
                                 "label": "",
                                 "min": "auto",
                                 "max": "auto"
-                            },
-                            "markers": []
-                        },
-                        "layout": {
-                            "x": 0,
-                            "y": 3,
-                            "width": 3,
-                            "height": 2
+                            }
                         }
                     },
                     {
@@ -1366,14 +1297,7 @@
                                 "label": "",
                                 "min": "auto",
                                 "max": "auto"
-                            },
-                            "markers": []
-                        },
-                        "layout": {
-                            "x": 3,
-                            "y": 3,
-                            "width": 3,
-                            "height": 2
+                            }
                         }
                     }
                 ]
