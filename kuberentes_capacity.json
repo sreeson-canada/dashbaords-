@@ -1,0 +1,161 @@
+{
+  "title": "Kubernetes Capacity Planning",
+  "description": "## Kubernetes Capacity Planning\n\nUse this Dashboard to understand the requested CPU/Memory for pods and what is really used\n\nSome resources:\n\n- [Datadog Infra > Kubernetes](https://docs.datadoghq.com/containers/kubernetes/#overview)\n- [Kubernetes patterns: capacity planning](https://www.cncf.io/blog/2019/10/08/kubernetes-patterns-capacity-planning/)\n- [Kubernetes scaling](https://medium.com/pareture/kubernetes-scaling-capacity-and-resource-planning-in-complex-clusters-97a6105b43a4)\n- [Setting up Vertical Pod Autoscaler](https://www.kubecost.com/kubernetes-autoscaling/kubernetes-vpa/)",
+  "widgets": [
+    {
+      "id": 986801580339488,
+      "definition": {
+        "title": "CPU Utilization",
+        "type": "group",
+        "background_color": "purple",
+        "show_title": true,
+        "layout_type": "ordered",
+        "widgets": [
+          {
+            "id": 3899377194392834,
+            "definition": {
+              "title": "CPU by cluster",
+              "title_size": "16",
+              "title_align": "left",
+              "type": "query_table",
+              "requests": [
+                {
+                  "formulas": [
+                    {
+                      "alias": "requests",
+                      "cell_display_mode": "bar",
+                      "limit": {
+                        "count": 500,
+                        "order": "desc"
+                      },
+                      "formula": "query1"
+                    },
+                    {
+                      "alias": "limits",
+                      "cell_display_mode": "bar",
+                      "formula": "query2"
+                    },
+                    {
+                      "alias": "usage",
+                      "cell_display_mode": "bar",
+                      "formula": "query7"
+                    },
+                    {
+                      "alias": "num cores",
+                      "cell_display_mode": "bar",
+                      "formula": "query3"
+                    },
+                    {
+                      "alias": "cpu idle",
+                      "cell_display_mode": "bar",
+                      "formula": "query4"
+                    },
+                    {
+                      "alias": "cpu system",
+                      "cell_display_mode": "bar",
+                      "formula": "query5"
+                    },
+                    {
+                      "alias": "cpu user",
+                      "cell_display_mode": "bar",
+                      "formula": "query6"
+                    }
+                  ],
+                  "response_format": "scalar",
+                  "queries": [
+                    {
+                      "query": "sum:kubernetes.cpu.requests{$scope,$env,$kube_namespace,$kube_cluster_name} by {kube_cluster_name,env}",
+                      "data_source": "metrics",
+                      "name": "query1",
+                      "aggregator": "avg"
+                    },
+                    {
+                      "query": "sum:kubernetes.cpu.limits{$scope,$env,$kube_namespace,$kube_cluster_name} by {kube_cluster_name,env}",
+                      "data_source": "metrics",
+                      "name": "query2",
+                      "aggregator": "avg"
+                    },
+                    {
+                      "query": "sum:kubernetes.cpu.usage.total{$scope,$env,$kube_namespace,$kube_cluster_name} by {kube_cluster_name,env}",
+                      "data_source": "metrics",
+                      "name": "query7",
+                      "aggregator": "avg"
+                    },
+                    {
+                      "query": "sum:system.cpu.num_cores{$scope,$env,$kube_namespace,$kube_cluster_name} by {kube_cluster_name,env}",
+                      "data_source": "metrics",
+                      "name": "query3",
+                      "aggregator": "avg"
+                    },
+                    {
+                      "query": "avg:system.cpu.idle{$scope,$env,$kube_namespace,$kube_cluster_name} by {kube_cluster_name,env}",
+                      "data_source": "metrics",
+                      "name": "query4",
+                      "aggregator": "avg"
+                    },
+                    {
+                      "query": "avg:system.cpu.system{$scope,$env,$kube_namespace,$kube_cluster_name} by {kube_cluster_name,env}",
+                      "data_source": "metrics",
+                      "name": "query5",
+                      "aggregator": "avg"
+                    },
+                    {
+                      "query": "avg:system.cpu.user{$scope,$env,$kube_namespace,$kube_cluster_name} by {kube_cluster_name,env}",
+                      "data_source": "metrics",
+                      "name": "query6",
+                      "aggregator": "avg"
+                    }
+                  ],
+                  "has_search_bar": "auto"
+                }
+              ],
+              "layout": {
+                "x": 0,
+                "y": 0,
+                "width": 12,
+                "height": 3
+              }
+            }
+          }
+        ]
+      },
+      "layout": {
+        "x": 0,
+        "y": 3,
+        "width": 12,
+        "height": 11
+      }
+    }
+  ],
+  "template_variables": [
+    {
+      "name": "scope",
+      "prefix": "*",
+      "available_values": [],
+      "default": "*"
+    },
+    {
+      "name": "env",
+      "prefix": "env",
+      "available_values": [],
+      "default": "*"
+    },
+    {
+      "name": "kube_cluster_name",
+      "prefix": "kube_cluster_name",
+      "available_values": [],
+      "default": "*"
+    },
+    {
+      "name": "kube_namespace",
+      "prefix": "kube_namespace",
+      "available_values": [],
+      "default": "*"
+    }
+  ],
+  "layout_type": "ordered",
+  "is_read_only": false,
+  "notify_list": [],
+  "reflow_type": "fixed",
+  "id": "23r-z5n-9n7"
+}
