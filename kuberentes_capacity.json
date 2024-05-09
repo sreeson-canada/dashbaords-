@@ -1,6 +1,6 @@
 {
   "title": "Kubernetes Capacity Planning",
-  "description": "## Kubernetes Capacity Planning\n\nUse this Dashboard to understand the requested CPU/Memory for pods and what is really used\n\nSome resources:\n\n- [Datadog Infra > Kubernetes](https://docs.datadoghq.com/containers/kubernetes/#overview)\n- [Kubernetes patterns: capacity planning](https://www.cncf.io/blog/2019/10/08/kubernetes-patterns-capacity-planning/)\n- [Kubernetes scaling](https://medium.com/pareture/kubernetes-scaling-capacity-and-resource-planning-in-complex-clusters-97a6105b43a4)\n- [Setting up Vertical Pod Autoscaler](https://www.kubecost.com/kubernetes-autoscaling/kubernetes-vpa/)",
+  "description": "## Kubernetes Capacity Planning\n\nUse this Dashboard to understand the requested CPU/Memory for pods and what is really used.\n\nSome resources:\n\n- [Datadog Infra > Kubernetes](https://docs.datadoghq.com/containers/kubernetes/#overview)\n- [Kubernetes patterns: capacity planning](https://www.cncf.io/blog/2019/10/08/kubernetes-patterns-capacity-planning/)\n- [Kubernetes scaling](https://medium.com/pareture/kubernetes-scaling-capacity-and-resource-planning-in-complex-clusters-97a6105b43a4)\n- [Setting up Vertical Pod Autoscaler](https://www.kubecost.com/kubernetes-autoscaling/kubernetes-vpa/)",
   "widgets": [
     {
       "id": 986801580339488,
@@ -120,7 +120,7 @@
       },
       "layout": {
         "x": 0,
-        "y": 3,
+        "y": 0,
         "width": 12,
         "height": 11
       }
